@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Store</title>
+    <link rel="stylesheet" href="venda.css">
+</head>
+<body>
+    <header>
+        <h1>Halloween Store</h1>
+    </header>
+
+    <div class="conteiner">
+        <div class="itens-container">
+            <div class="item">
+                <img src="dente_vampiro.png" alt="Dente de vampiro">
+                <p>Dente de vampiro - R$10,99</p>
+                <button class="adicionar-btn" onclick="adicionarItem('Dente de vampiro', 10.99)">Adicionar</button>
+            </div>
+
+            <div class="item">
+                <img src="bandana_caveira.png" alt="Bandana de caveira">
+                <p>Bandana caveira - R$20</p>
+                <button class="adicionar-btn" onclick="adicionarItem('Bandana de caveira', 20)">Adicionar</button>
+            </div>
+
+            <div class="item">
+                <img src="chapeu_bruxa.png" alt="Chapéu de bruxa">
+                <p>Chapéu de bruxa - R$15</p>
+                <button class="adicionar-btn" onclick="adicionarItem('Chapéu de bruxa', 15)">Adicionar</button>
+            </div>
+
+            <div class="item">
+                <img src="foice_morte.png" alt="Foice da morte">
+                <p>Foice da morte - R$30,50</p>
+                <button class="adicionar-btn" onclick="adicionarItem('Foice da morte', 30.50)">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="itens-adicionados">
+        <h2>Itens Adicionados ao Carrinho</h2>
+        <ul id="itens-adicionados-lista">
+        </ul>
+        <div id="total">Total: R$0</div>
+    </div>
+
+    <div id="confirmacao" class="escondido">Item adicionado com sucesso!</div>
+
+    <script>
+        let total = 0;
+
+        function adicionarItem(nome, valor) {
+            const itemAdicionado = document.createElement('li');
+            itemAdicionado.textContent = `${nome} - R$${valor}`;
+            document.getElementById('itens-adicionados-lista').appendChild(itemAdicionado);
+
+            total += valor;
+            document.getElementById('total').textContent = `Total: R$${total}`;
+
+            const confirmacao = document.getElementById('confirmacao');
+            confirmacao.style.display = 'block';
+            setTimeout(() => {
+                confirmacao.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

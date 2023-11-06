@@ -1,0 +1,87 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #5e184c;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5e184c;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: whitesmoke;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.itens-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+
+.item {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+}
+
+.adicionar-btn {
+    background-color: #5e184c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.itens-adicionados {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 260px;
+    margin-right: 260px;
+    background-color: #8f8f8f;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 10px;
+    color: #5e184c;
+}
+
+#confirmacao {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
